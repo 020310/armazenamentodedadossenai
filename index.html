@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
     <title>Armazenamento SENAI</title>
 
     <link rel="stylesheet" href="style.css">
@@ -17,11 +19,14 @@
     </h1>
 
     <!-- PASTA -->
-    <div class="folders">
+    <div class="folders"
+    id="folders">
 
-        <div class="folder-item" onclick="abrirSistema()">
+        <div class="folder-item"
+        onclick="abrirSistema()">
 
-            <img src="img/Pasta sem fundo.png">
+            <!-- TROQUE IMG SE NECESSÁRIO -->
+            <img src="Img/Pasta sem fundo.png">
 
             <span>Energia Elétrica</span>
 
@@ -30,11 +35,21 @@
     </div>
 
     <!-- SISTEMA -->
-    <div class="sistema" id="sistema">
+    <div class="sistema"
+    id="sistema">
 
         <!-- MENU -->
         <div class="left-panel">
 
+            <!-- VOLTAR -->
+            <button class="menu-button voltar"
+            onclick="voltarInicio()">
+
+                ← Voltar
+
+            </button>
+
+            <!-- ANOTAÇÕES -->
             <button class="menu-button"
             onclick="toggleAnotacoes()">
 
@@ -42,6 +57,7 @@
 
             </button>
 
+            <!-- CONTEÚDO -->
             <button class="menu-button"
             onclick="toggleConteudo()">
 
@@ -70,31 +86,20 @@
 
             <div class="conteudo-texto">
 
-                AQUI FICA O TEXTO FIXO DO SITE.
+                AQUI VOCÊ COLOCARÁ O TEXTO FIXO DO SITE.
 
                 <br><br>
 
-                Você pode colocar:
-                <br>
-                • matérias
-                <br>
-                • conteúdo
-                <br>
-                • documentação
-                <br>
-                • explicações
-                <br><br>
-
-                O painel possui scroll automático.
+                Esse painel possui scroll automático.
 
                 <br><br><br>
 
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
+                Você pode adicionar
+                conteúdos infinitos aqui.
 
-                <br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br>
 
-                Mais conteúdo aqui...
+                Mais conteúdo...
 
             </div>
 
@@ -103,7 +108,8 @@
     </div>
 
     <!-- LOGO -->
-    <img src="img/SENAILogo.png"
+    <!-- TROQUE IMG SE NECESSÁRIO -->
+    <img src="Img/SENAILogo.png"
     class="senai-logo">
 
 <script>
@@ -111,17 +117,36 @@
 const sistema =
 document.getElementById("sistema");
 
+const folders =
+document.getElementById("folders");
+
 const anotacoes =
 document.getElementById("anotacoesPanel");
 
 const conteudo =
 document.getElementById("conteudoPanel");
 
+/* ABRIR SISTEMA */
 function abrirSistema(){
 
     sistema.style.display = "flex";
+
+    folders.style.display = "none";
 }
 
+/* VOLTAR */
+function voltarInicio(){
+
+    sistema.style.display = "none";
+
+    folders.style.display = "flex";
+
+    anotacoes.classList.remove("open");
+
+    conteudo.classList.remove("open");
+}
+
+/* ANOTAÇÕES */
 function toggleAnotacoes(){
 
     anotacoes.classList.toggle("open");
@@ -129,6 +154,7 @@ function toggleAnotacoes(){
     conteudo.classList.remove("open");
 }
 
+/* CONTEÚDO */
 function toggleConteudo(){
 
     conteudo.classList.toggle("open");
