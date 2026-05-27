@@ -1,25 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Energia Elétrica</title>
 
-  <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energia Elétrica</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1 class="titulo">
-    Energia Elétrica
-  </h1>
+    <!-- PAINEL ESQUERDO -->
+    <div class="left-panel">
 
-  <div class="texto-area">
+        <button class="menu-button" onclick="toggleAnotacoes()">
+            Anotações
+        </button>
 
-    <textarea placeholder="Escreva todas as informações aqui..."></textarea>
+        <button class="menu-button" onclick="toggleConteudo()">
+            Conteúdo
+        </button>
 
-  </div>
+    </div>
 
-  <img src="img/senai.png" class="senai-logo">
+    <!-- ABA ANOTAÇÕES -->
+    <div class="right-panel" id="anotacoesPanel">
+
+        <h1>Anotações</h1>
+
+        <textarea placeholder="Digite suas anotações aqui..."></textarea>
+
+    </div>
+
+    <!-- ABA CONTEÚDO -->
+    <div class="right-panel" id="conteudoPanel">
+
+        <h1>Conteúdo</h1>
+
+        <div class="conteudo-texto">
+
+            AQUI VOCÊ COLOCARÁ O TEXTO FIXO DO SITE.
+            <br><br>
+
+            Você poderá adicionar:
+            <br>
+            - conteúdos
+            <br>
+            - explicações
+            <br>
+            - informações
+            <br>
+            - documentação
+            <br><br>
+
+            Se o texto ficar gigante,
+            a área terá scroll automático.
+
+        </div>
+
+    </div>
+
+    <!-- LOGO -->
+    <img src="Img/SENAILogo.png" class="senai-logo">
+
+<script>
+
+const anotacoes = document.getElementById("anotacoesPanel");
+const conteudo = document.getElementById("conteudoPanel");
+
+function toggleAnotacoes(){
+
+    anotacoes.classList.toggle("open");
+
+    conteudo.classList.remove("open");
+}
+
+function toggleConteudo(){
+
+    conteudo.classList.toggle("open");
+
+    anotacoes.classList.remove("open");
+}
+
+</script>
 
 </body>
+
 </html>
