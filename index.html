@@ -19,18 +19,124 @@
     <!-- PASTA -->
     <div class="folders">
 
-        <a href="energia.html" class="folder-item">
+        <div class="folder-item" onclick="abrirSistema()">
 
-            <img src="Img/Pasta sem fundo.png">
+            <img src="img/Pasta sem fundo.png">
 
             <span>Energia Elétrica</span>
 
-        </a>
+        </div>
+
+    </div>
+
+    <!-- SISTEMA -->
+    <div class="sistema" id="sistema">
+
+        <!-- MENU -->
+        <div class="left-panel">
+
+            <button class="menu-button"
+            onclick="toggleAnotacoes()">
+
+                Anotações
+
+            </button>
+
+            <button class="menu-button"
+            onclick="toggleConteudo()">
+
+                Conteúdo
+
+            </button>
+
+        </div>
+
+        <!-- ANOTAÇÕES -->
+        <div class="right-panel"
+        id="anotacoesPanel">
+
+            <h1>Anotações</h1>
+
+            <textarea
+            placeholder="Digite suas anotações aqui..."></textarea>
+
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="right-panel"
+        id="conteudoPanel">
+
+            <h1>Conteúdo</h1>
+
+            <div class="conteudo-texto">
+
+                AQUI FICA O TEXTO FIXO DO SITE.
+
+                <br><br>
+
+                Você pode colocar:
+                <br>
+                • matérias
+                <br>
+                • conteúdo
+                <br>
+                • documentação
+                <br>
+                • explicações
+                <br><br>
+
+                O painel possui scroll automático.
+
+                <br><br><br>
+
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+
+                <br><br><br><br><br><br><br><br><br><br>
+
+                Mais conteúdo aqui...
+
+            </div>
+
+        </div>
 
     </div>
 
     <!-- LOGO -->
-    <img src="Img/SENAILogo.png" class="senai-logo">
+    <img src="img/SENAILogo.png"
+    class="senai-logo">
+
+<script>
+
+const sistema =
+document.getElementById("sistema");
+
+const anotacoes =
+document.getElementById("anotacoesPanel");
+
+const conteudo =
+document.getElementById("conteudoPanel");
+
+function abrirSistema(){
+
+    sistema.style.display = "flex";
+}
+
+function toggleAnotacoes(){
+
+    anotacoes.classList.toggle("open");
+
+    conteudo.classList.remove("open");
+}
+
+function toggleConteudo(){
+
+    conteudo.classList.toggle("open");
+
+    anotacoes.classList.remove("open");
+}
+
+</script>
 
 </body>
 
