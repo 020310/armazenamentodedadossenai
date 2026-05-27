@@ -1,59 +1,78 @@
-/* FUNDO GERAL */
+/* FUNDO */
 body{
     margin:0;
     padding:0;
+
     background:#d9d9d9;
+
     font-family:Arial, Helvetica, sans-serif;
-    overflow-x:hidden;
+
+    overflow:hidden;
 }
 
 /* TÍTULO */
 .titulo{
     text-align:center;
+
     margin-top:30px;
-    color:#222;
-    font-size:32px;
+
+    color:#1f1f1f;
+
+    font-size:34px;
 }
 
 /* ÁREA DAS PASTAS */
 .folders{
-    position:absolute;
-
-    top:120px;
-    right:120px;
+    width:100%;
 
     display:flex;
-    flex-direction:column;
-    gap:25px;
+
+    justify-content:center;
+
+    margin-top:120px;
 }
 
-/* ITEM DA PASTA */
+/* PASTA */
 .folder-item{
     display:flex;
+
     align-items:center;
-    gap:15px;
+
+    gap:20px;
 
     text-decoration:none;
+
     color:#111;
 
-    transition:0.2s;
-    cursor:pointer;
+    background:#ececec;
+
+    padding:18px 30px;
+
+    border-radius:18px;
+
+    transition:0.25s;
+
+    box-shadow:0 5px 18px rgba(0,0,0,0.1);
 }
 
-/* EFEITO AO PASSAR O MOUSE */
+/* HOVER */
 .folder-item:hover{
     transform:scale(1.05);
-    filter:brightness(1.1);
+
+    background:#f5f5f5;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* IMAGEM DA PASTA */
 .folder-item img{
-    width:70px;
+    width:80px;
 }
 
-/* TEXTO DA PASTA */
+/* TEXTO */
 .folder-item span{
-    font-size:22px;
+    font-size:26px;
+
     font-weight:bold;
 }
 
@@ -61,36 +80,8 @@ body{
 .senai-logo{
     position:fixed;
 
-    bottom:20px;
     right:20px;
+    bottom:20px;
 
     width:120px;
-}
-
-/* ÁREA DE TEXTO */
-.texto-area{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    margin-top:40px;
-}
-
-/* TEXTAREA */
-textarea{
-    width:85%;
-    height:2000px;
-
-    background:#ececec;
-
-    border:none;
-    outline:none;
-
-    resize:vertical;
-
-    padding:20px;
-
-    font-size:18px;
-    color:#111;
-
-    border-radius:10px;
 }
