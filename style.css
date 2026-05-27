@@ -215,3 +215,13 @@ body{
 
     min-height:1500px;
 }
+
+/* ESCONDER SISTEMA */
+.sistema{
+    display:none;
+}
+
+/* BOTÃO VOLTAR */
+.voltar{
+    background:#dcdcdc;
+}
