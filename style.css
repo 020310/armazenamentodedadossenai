@@ -1,1 +1,96 @@
+/* FUNDO GERAL */
+body{
+    margin:0;
+    padding:0;
+    background:#d9d9d9;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
 
+/* TÍTULO */
+.titulo{
+    text-align:center;
+    margin-top:30px;
+    color:#222;
+    font-size:32px;
+}
+
+/* ÁREA DAS PASTAS */
+.folders{
+    position:absolute;
+
+    top:120px;
+    right:120px;
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* ITEM DA PASTA */
+.folder-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    text-decoration:none;
+    color:#111;
+
+    transition:0.2s;
+    cursor:pointer;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.folder-item:hover{
+    transform:scale(1.05);
+    filter:brightness(1.1);
+}
+
+/* IMAGEM DA PASTA */
+.folder-item img{
+    width:70px;
+}
+
+/* TEXTO DA PASTA */
+.folder-item span{
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* LOGO SENAI */
+.senai-logo{
+    position:fixed;
+
+    bottom:20px;
+    right:20px;
+
+    width:120px;
+}
+
+/* ÁREA DE TEXTO */
+.texto-area{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+/* TEXTAREA */
+textarea{
+    width:85%;
+    height:2000px;
+
+    background:#ececec;
+
+    border:none;
+    outline:none;
+
+    resize:vertical;
+
+    padding:20px;
+
+    font-size:18px;
+    color:#111;
+
+    border-radius:10px;
+}
